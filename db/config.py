@@ -14,6 +14,9 @@ class Base(DeclarativeBase):
 
 class Config:
     ENGINE = create_engine("sqlite:///my_db.db", echo=True)
+    # ENGINE = create_engine(
+    #     "postgresql+psycopg2://sammyexit:acuta@localhost:5432/sammy", echo=True
+    # )
     BASE = declarative_base()
     BASE = Base
     SESSION = sessionmaker(bind=ENGINE)
